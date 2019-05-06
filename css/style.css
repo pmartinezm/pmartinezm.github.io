@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+.links-cont {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(16, 16, 16);
+    padding: 5px;
+}
+
+.link {
+    font-size: 1.3em;
+    margin-right: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
