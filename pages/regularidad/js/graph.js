@@ -28,6 +28,7 @@ function drawDot(x, y, size) {
   var x = x + size / 2;
   var y = y - size / 2;
   ctx.fillRect(x, y, size, size);
+  setTimeout(250);
 }
 
 function generateSpeed(max, min) {
