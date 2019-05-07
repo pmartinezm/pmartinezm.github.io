@@ -21,7 +21,11 @@ function simulate() {
   
   for(var i = 0; i < data.length; i++) {
     var x = canvas.width / count;
+    var y = canvas.height - 50 - data[i];
     drawDot(x*i, canvas.height - 50 - data[i], 10);
+    if(i < data.length - 1) {
+      drawLine(x * i, canvas.height - 50 - data[i], x * (i + 1), canvas.height - 50 - data[i + 1]);
+    }
     //ctx.fillRect(x*i, canvas.height - 50 - readings[i], 10, 10);
   }
 }
