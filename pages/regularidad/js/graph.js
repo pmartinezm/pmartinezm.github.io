@@ -22,7 +22,7 @@ function presentData(data) {
   ctx.fillStyle = "#ffc321";
   ctx.strokeStyle = "#ffc321";
   for(var i = 0; i < data.length; i++) {
-    var x = canvas.width / (data.lenght - 1);
+    var x = canvas.width / (data.length - 1);
     var y = canvas.height - yOffset - data[i];
     drawDot(x*i, canvas.height - yOffset - data[i], 5);
     if(i < data.length - 1) {
