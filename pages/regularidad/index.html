@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="content">
-    <div class="input-box">
+    <div class="input-box hidden">
       <span>Distancia tramo (km)</span>
       <input type="text" id="distance"><br>
       <span>Longitud rueda</span>
@@ -33,13 +33,13 @@
       <button onclick="calculateTime()">Calcular tiempo</button>
       <button onclick="calculateSpeed()">Calcular velocidad</button>
     </div>
+    <div class="graph">
+      <div class="graph-title">Gráfico</div>
+      <div class="graph-graph"></div>
+    </div>
     <div class="results">
       <div class="results-title">Resultados</div>
       <div class="results-results"></div>
-    </div>
-    <div class="graph">
-      <div class="graph-title"><button onclick="simulateSpeed()">Gráfico</button></div>
-      <div class="graph-graph"></div>
     </div>
   </div>
 </body>
