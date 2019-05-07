@@ -22,6 +22,6 @@ var simulate = function() {
   }
 }();
 
-var generateSpeed = function(max, min) {
+function generateSpeed(max, min) {
   return math.random()*max+min;
 }
