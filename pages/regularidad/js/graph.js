@@ -1,5 +1,7 @@
 var canvas, ctx;
 var yOffset = 50;
+var count = 20;
+
 var prepare = function() {
   canvas  = document.createElement("canvas");
   canvas.height = 150;
@@ -10,7 +12,6 @@ var prepare = function() {
 }();
 
 function simulate() {
-  var count = 20;
   var data = [];
   
   for(var i = 0; i < count; i++) {
