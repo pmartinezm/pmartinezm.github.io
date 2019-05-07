@@ -11,7 +11,7 @@ function calculate() {
   console.log("  Tiempo invertido: " + time);
   
   console.log("RESULTADOS");
-  console.log("  Tiempo: " + distance / vel + "h // " + distance / vel * 60 * 60 + "s");
+  console.log("  Tiempo: " + distance / vel + "h // " + (distance / vel) * 60 * 60 + "s");
 }
 
 function getData() {
