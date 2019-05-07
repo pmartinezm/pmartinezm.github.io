@@ -3,7 +3,15 @@ var distance, wheel, freq, vel, time;
 function calculate() {
   getData();
   
-  console.log("Tiempo: " + distance / vel);
+  console.log("DATOS INTRODUCIDOS");
+  console.log("  Distancia: " + distance);
+  console.log("  Longitud rueda: " + wheel);
+  console.log("  Vueltas/sec: " + freq);
+  console.log("  Velocidad: " + vel);
+  console.log("  Tiempo invertido: " + time);
+  
+  console.log("RESULTADOS");
+  console.log("  Tiempo: " + distance / vel);
 }
 
 function getData() {
