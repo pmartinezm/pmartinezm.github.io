@@ -35,5 +35,6 @@ var check = function() {
         document.getElementsByClassName("header")[0].style.backgroundColor = "#ffc321";
         document.getElementsByClassName("header")[0].style.color = "black";
         console.log("WORKING ON LOCAL");
-    }
+    } else {
+        console.log("WORKING ONLINE");
 }();
