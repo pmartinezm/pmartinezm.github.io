@@ -11,3 +11,19 @@
   flex: 0 0 auto;
   flex-direction: column;
 }
+
+.results {
+  border: solid 2px gray;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+}
+
+.results-title {
+  font-size: 1.25em;
+  color: inherit;
+}
+
+.results-results {
+  font-size: 1.1em;
+}
