@@ -3,7 +3,7 @@
   flex: 0 0 auto;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: auto;
 }
 
 .input-box > input {
