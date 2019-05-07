@@ -25,6 +25,7 @@ html {
 .link {
     font-size: 1.3em;
     margin-right: 30px;
+    color: inherit;
 }
 
 a {
