@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 
-.results {
+.results, .graph {
   border: solid 2px gray;
   display: flex;
   flex: 0 0 auto;
@@ -21,11 +21,11 @@
   height: 200px;
 }
 
-.results-title {
+.results-title, .graph-title {
   font-size: 1.25em;
   color: inherit;
 }
 
-.results-results {
+.results-results, .graph-graph {
   font-size: 1.1em;
 }
