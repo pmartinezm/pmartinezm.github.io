@@ -1,4 +1,4 @@
-function simulateSpeed() {
+var simulateSpeed = function() {
   console.log("Simulating speed...");
   
   var data = getSpeed(25);
@@ -7,4 +7,4 @@ function simulateSpeed() {
   console.log(data);
   
   presentData(data);
-}
+}();
