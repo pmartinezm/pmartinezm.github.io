@@ -5,9 +5,10 @@ var prepare = function() {
   canvas.width = 450;
   ctx = canvas.getContext("2d");
   document.getElementsByClassName("graph-graph")[0].appendChild(canvas);
+  simulate();
 }();
 
-var simulate = function() {
+function simulate() {
   var count = 20;
   var readings = [];
   
@@ -20,7 +21,7 @@ var simulate = function() {
     ctx.fillStyle = "#ffc321";
     ctx.drawRect(x*i, canvas-height - 50 - readings[i], 10, 10);
   }
-}();
+};
 
 function generateSpeed(max, min) {
   return Math.random()*max+min;
