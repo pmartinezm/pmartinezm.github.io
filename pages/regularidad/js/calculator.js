@@ -13,11 +13,11 @@ function calculateSpeed() {
 }
 
 function getData() {
-  distance = parseInt($("distance").value);
-  wheel = parseInt($("wheel"));
-  freq = parseInt($("freq").value);
-  vel = parseInt($("vel").value);
-  time =parseInt($("time").value);
+  distance = parseFloat($("distance").value);
+  wheel = parseFloat($("wheel"));
+  freq = parseFloat($("freq").value);
+  vel = parseFloat($("vel").value);
+  time =parseFloat($("time").value);
   
   console.log("DATOS INTRODUCIDOS");
   console.log("  Distancia: " + distance);
