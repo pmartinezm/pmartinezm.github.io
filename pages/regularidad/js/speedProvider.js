@@ -1,7 +1,6 @@
 function generateSpeed(readings) {
   console.log("Generating data...");
-  
-  readings = readings || 10;
+
   var data = [];
   
   console.log("Readings: " + readings);
