@@ -15,10 +15,10 @@ var simulate = function() {
     readings.push(generateSpeed(50,40));
   }
   
-  for(var i = 0; i < reading.length; i++) {
+  for(var i = 0; i < readings.length; i++) {
     var x = canvas.width / count;
     ctx.fillStyle = "#ffc321";
-    ctx.drawRect(x*i, canvas-height - 50 - reading[i], 10, 10);
+    ctx.drawRect(x*i, canvas-height - 50 - readings[i], 10, 10);
   }
 }();
 
