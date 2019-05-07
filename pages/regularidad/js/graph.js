@@ -15,12 +15,13 @@ function simulate() {
   for(var i = 0; i < count; i++) {
     data.push(generateSpeed(50,40));
   }
+  data[0] = 0;
   
   ctx.fillStyle = "#ffc321";
   ctx.strokeStyle = "#ffc321";
   
   for(var i = 0; i < data.length; i++) {
-    var x = canvas.width / count;
+    var x = canvas.width / (count - 1);
     var y = canvas.height - 50 - data[i];
     drawDot(x*i, canvas.height - 50 - data[i], 5);
     if(i < data.length - 1) {
