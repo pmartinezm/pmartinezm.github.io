@@ -11,6 +11,7 @@ html {
 
 .header {
     background-color: rgb(16, 16, 16);
+    color: white;
 }
 
 .page-messages {
@@ -32,7 +33,7 @@ html {
 .link {
     font-size: 1.3em;
     margin-right: 30px;
-    color: white;
+    color: inherit;
 }
 
 a {
