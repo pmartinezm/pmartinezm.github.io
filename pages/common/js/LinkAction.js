@@ -30,7 +30,7 @@ function redirect(pageKey) {
     console.log("Redirect: " + uri);
 }
 
-function check() {
+var check = function {
     if(workOnLocal) {
         document.getElementsByClassName("header")[0].style.backgroundColor = "#ffc321";
         console.log("WORKING ON LOCAL");
