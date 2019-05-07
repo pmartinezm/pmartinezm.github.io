@@ -18,20 +18,21 @@ function simulate() {
   }
   data[0] = 0;
   
-  ctx.fillStyle = "#ffc321";
-  ctx.strokeStyle = "#ffc321";
-  
   prepareGraph();
   presentData(data);
 }
 
 function prepareGraph() {
+  ctx.strokeStyle = "gray";
   ctx.beginPath();
   ctx.moveTo(0, canvas.height - yOffset);
   ctx.lineTo(canvas.width, canvas.height - yOffset);
+  ctx.stroke();
 }
 
-function prsentData(data) {
+function presentData(data) {
+  ctx.fillStyle = "#ffc321";
+  ctx.strokeStyle = "#ffc321";
   for(var i = 0; i < data.length; i++) {
     var x = canvas.width / (count - 1);
     var y = canvas.height - yOffset - data[i];
