@@ -1,15 +1,15 @@
-function generateSpeed(readings) {
+function getSpeed(readings) {
 
-  //var data = [];
+  var data = [];
   
   console.log("Readings: " + readings);
   
-  //for(var i = 0; i < readings; i++) {
-  //  data.push(generateSpeed(50,40));
-  //}
-  //data[0] = 0;
-  
-  //return data;
+  for(var i = 0; i < readings; i++) {
+    data.push(generateSpeed(50,40));
+  }
+  data[0] = 0;
+
+  return data;
 }
 
 function generateSpeed(max, min) {
