@@ -41,11 +41,11 @@ a {
     text-decoration: none;
 }
 
-button {
+button-link {
     border: none;
     background: none;
 }
 
-button:active {
+button-link:active {
     border: none;
 }
