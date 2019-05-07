@@ -6,3 +6,22 @@ var prepare = function() {
   ctx = canvas.getContext("2d");
   document.getElementsByClassName("graph-graph")[0].appendChild(canvas);
 }();
+
+var simulate = function() {
+  var count = 20;
+  var readings = [];
+  
+  for(var i = 0; i < count; i++) {
+    readings.push(generateSpeed(50,40));
+  }
+  
+  for(var i = 0; i < reading.length; i++) {
+    var x = canvas.width / count;
+    ctx.fillStyle = "#ffc321";
+    ctx.drawRect(x*i, canvas-height - 50 - reading[i], 10, 10);
+  }
+}();
+
+var generateSpeed = function(max, min) {
+  return math.random()*max+min;
+}
