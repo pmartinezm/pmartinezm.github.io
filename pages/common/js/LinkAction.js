@@ -33,6 +33,7 @@ function redirect(pageKey) {
 var check = function() {
     if(workOnLocal) {
         document.getElementsByClassName("header")[0].style.backgroundColor = "#ffc321";
+        document.getElementsByClassName("header")[0].style.color = "black";
         console.log("WORKING ON LOCAL");
     }
 }();
