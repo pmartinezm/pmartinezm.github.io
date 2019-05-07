@@ -31,7 +31,7 @@ function simulate() {
 }
 
 function drawDot(x, y, size) {
-  var x = x + size / 2;
+  var x = x - size / 2;
   var y = y - size / 2;
   ctx.fillRect(x, y, size, size);
 }
