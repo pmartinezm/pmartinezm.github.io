@@ -10,10 +10,10 @@ html {
 
 .header {
     background-color: rgb(16, 16, 16);
+    color: white;
 }
 
 .page-messages {
-    color: inherit;
     font-size: 1.5em;
     text-align: center;
 }
@@ -31,7 +31,6 @@ html {
 .link {
     font-size: 1.3em;
     margin-right: 30px;
-    color: inherit;
 }
 
 a {
