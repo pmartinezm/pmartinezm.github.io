@@ -1,4 +1,5 @@
 var canvas, ctx;
+var yOffset = 50;
 var prepare = function() {
   canvas  = document.createElement("canvas");
   canvas.height = 150;
@@ -20,14 +21,24 @@ function simulate() {
   ctx.fillStyle = "#ffc321";
   ctx.strokeStyle = "#ffc321";
   
+  prepareGraph();
+  presentData(data);
+}
+
+function prepareGraph() {
+  ctx.beginPath();
+  ctx.moveTo(0, canvas.height - yOffset);
+  ctx.lineTo(canvas.width, canvas.height - yOffset);
+}
+
+function prsentData(data) {
   for(var i = 0; i < data.length; i++) {
     var x = canvas.width / (count - 1);
-    var y = canvas.height - 50 - data[i];
-    drawDot(x*i, canvas.height - 50 - data[i], 5);
+    var y = canvas.height - yOffset - data[i];
+    drawDot(x*i, canvas.height - yOffset - data[i], 5);
     if(i < data.length - 1) {
-      drawLine(x * i, canvas.height - 50 - data[i], x * (i + 1), canvas.height - 50 - data[i + 1]);
+      drawLine(x * i, canvas.height - yOffset - data[i], x * (i + 1), canvas.height - yOffset - data[i + 1]);
     }
-    //ctx.fillRect(x*i, canvas.height - 50 - readings[i], 10, 10);
   }
 }
 
