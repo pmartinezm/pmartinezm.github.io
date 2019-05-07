@@ -9,16 +9,24 @@ var prepare = function() {
   document.getElementsByClassName("graph-graph")[0].appendChild(canvas);
 }();
 
-function prepareGraph() {
+function prepareGraph(readings) {
   ctx.strokeStyle = "gray";
   ctx.beginPath();
   ctx.moveTo(0, canvas.height - yOffset);
   ctx.lineTo(canvas.width, canvas.height - yOffset);
   ctx.stroke();
+  
+  for(var i = 1; i < readings - 1; i++) {
+    var x = canvas.width / readings;
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, canvas.height);
+    ctx.stroke();
+  }
 }
 
 function presentData(data) {
-  prepareGraph();
+  prepareGraph(data.length);
   ctx.fillStyle = "#ffc321";
   ctx.strokeStyle = "#ffc321";
   for(var i = 0; i < data.length; i++) {
