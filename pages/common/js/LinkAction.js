@@ -1,4 +1,4 @@
-var workOnLocal = true;
+var workOnLocal = false;
 var remote = {
     home: "http://pmartinezm.github.io",
     regularidad: "pages/regularidad/index.html"
