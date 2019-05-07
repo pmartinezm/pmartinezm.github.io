@@ -1,6 +1,5 @@
 var canvas, ctx;
 var yOffset = 50;
-var count = 20;
 
 var prepare = function() {
   canvas  = document.createElement("canvas");
@@ -8,20 +7,7 @@ var prepare = function() {
   canvas.width = 450;
   ctx = canvas.getContext("2d");
   document.getElementsByClassName("graph-graph")[0].appendChild(canvas);
-  simulate();
 }();
-
-function simulate() {
-  var data = [];
-  
-  for(var i = 0; i < count; i++) {
-    data.push(generateSpeed(50,40));
-  }
-  data[0] = 0;
-  
-  prepareGraph();
-  presentData(data);
-}
 
 function prepareGraph() {
   ctx.strokeStyle = "gray";
@@ -32,10 +18,11 @@ function prepareGraph() {
 }
 
 function presentData(data) {
+  prepareGraph();
   ctx.fillStyle = "#ffc321";
   ctx.strokeStyle = "#ffc321";
   for(var i = 0; i < data.length; i++) {
-    var x = canvas.width / (count - 1);
+    var x = canvas.width / (data.lenght - 1);
     var y = canvas.height - yOffset - data[i];
     drawDot(x*i, canvas.height - yOffset - data[i], 5);
     if(i < data.length - 1) {
@@ -55,8 +42,4 @@ function drawLine(x, y, xx, yy) {
   ctx.moveTo(x, y);
   ctx.lineTo(xx, yy);
   ctx.stroke();
-}
-
-function generateSpeed(max, min) {
-  return Math.random()*max+min;
 }
