@@ -9,7 +9,7 @@ function calculateTime() {
 function calculateSpeed() {
   getData();
   console.log("RESULTADOS");
-  console.log("  Velocidad media: " + distance / vel + "km/h");
+  console.log("  Velocidad media: " + distance / time + "km/h");
 }
 
 function getData() {
