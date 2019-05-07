@@ -17,7 +17,7 @@ function prepareGraph(readings) {
   ctx.stroke();
   
   for(var i = 1; i < readings; i++) {
-    var x = canvas.width / readings;
+    var x = canvas.width / (readings - 1);
     ctx.beginPath();
     ctx.moveTo(x * i, 0);
     ctx.lineTo(x * i, canvas.height);
