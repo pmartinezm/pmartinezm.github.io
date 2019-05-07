@@ -33,5 +33,6 @@ function redirect(pageKey) {
 function check() {
     if(workOnLocal) {
         document.getElementsByClassName("header")[0].style.backgroundColor = "#ffc321";
+        console.log("WORKING ON LOCAL");
     }
 }();
