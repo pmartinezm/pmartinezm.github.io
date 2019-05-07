@@ -29,7 +29,7 @@ function getData() {
   vel = parseFloat($("vel").value);
   time =parseFloat($("time").value);
   
-  cont = document.getElementsByClassName("results-results");
+  cont = document.getElementsByClassName("results-results")[0];
   
   var res = "DATOS INTRODUCIDOS\n" + 
       "  Distancia: " + distance + "\n" + 
