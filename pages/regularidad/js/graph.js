@@ -23,5 +23,5 @@ var simulate = function() {
 }();
 
 function generateSpeed(max, min) {
-  return math.random()*max+min;
+  return Math.random()*max+min;
 }
