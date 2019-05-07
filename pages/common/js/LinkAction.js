@@ -37,4 +37,5 @@ var check = function() {
         console.log("WORKING ON LOCAL");
     } else {
         console.log("WORKING ONLINE");
+    }
 }();
