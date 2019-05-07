@@ -17,6 +17,7 @@
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
+  width: 50%;
 }
 
 .results-title {
