@@ -10,16 +10,16 @@ var prepare = function() {
 
 function simulate() {
   var count = 20;
-  var readings = [];
+  var data = [];
   
   for(var i = 0; i < count; i++) {
-    readings.push(generateSpeed(50,40));
+    data.push(generateSpeed(50,40));
   }
   
-  for(var i = 0; i < readings.length; i++) {
+  for(var i = 0; i < data.length; i++) {
     var x = canvas.width / count;
     ctx.fillStyle = "#ffc321";
-    drawDot(x*i, canvas.height - 50 - readings[i], 10);
+    drawDot(x*i, canvas.height - 50 - data[i], 10);
     //ctx.fillRect(x*i, canvas.height - 50 - readings[i], 10, 10);
   }
 }
@@ -28,7 +28,6 @@ function drawDot(x, y, size) {
   var x = x + size / 2;
   var y = y - size / 2;
   ctx.fillRect(x, y, size, size);
-  setTimeout(250);
 }
 
 function generateSpeed(max, min) {
