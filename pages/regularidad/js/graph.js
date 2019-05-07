@@ -19,7 +19,7 @@ function simulate() {
   for(var i = 0; i < readings.length; i++) {
     var x = canvas.width / count;
     ctx.fillStyle = "#ffc321";
-    ctx.drawRect(x*i, canvas.height - 50 - readings[i], 10, 10);
+    ctx.fillRect(x*i, canvas.height - 50 - readings[i], 10, 10);
   }
 };
 
