@@ -29,3 +29,9 @@ function redirect(pageKey) {
     console.log("Pages: ", pages);
     console.log("Redirect: " + uri);
 }
+
+function check() {
+    if(workOnLocal) {
+        document.getElementsByClassName("header")[0].style.backgroundColor = "#ffc321";
+    }
+}();
