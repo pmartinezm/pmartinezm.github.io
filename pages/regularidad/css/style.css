@@ -29,3 +29,7 @@
 .results-results, .graph-graph {
   font-size: 1.1em;
 }
+
+canvas {
+  border: solid 1px white;
+}
