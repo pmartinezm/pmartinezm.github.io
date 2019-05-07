@@ -1,6 +1,10 @@
 function generateSpeed(readings) {
+  console.log("Generating data...");
+  
   readings = readings || 10;
   var data = [];
+  
+  console.log("Readings: " + readings);
   
   for(var i = 0; i < readings; i++) {
     data.push(generateSpeed(50,40));
