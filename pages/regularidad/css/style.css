@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-box > input {
+  width: 100%;
+}
