@@ -1,19 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML5 Boilerplate</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-  <div class="main-content">
-    <div class="password-container">
-      <input type="password">
+    <div class="main">
+        <div class="form-container transition" id="formContainer">
+            <span>Introduce la contraseña</span>
+            <input ID="passwordInput" type="password" />
+            <span id="wrongPasswordMessage" style="min-height: 25px;"></span>
+            <button id="checkPasswordButton" onclick="checkPassword()">Ingresar</button>
+        </div>
+        <div class="prize-container transition-5 hide" id="prizeContainer" style="display: none;">
+            <img src="./premio.jpg" alt="">
+        </div>
     </div>
-  </div>
 </body>
-
 </html>
+
+<style>
+    html, body {
+        color: white;
+        background-color: #123;
+        margin: 0;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        height: 99vh;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+
+        background-color: #012;
+
+        width: 300px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 25px;
+    }
+
+    .transition {
+        transition: all 2000ms ease;
+    }
+
+    .transition-5 {
+        transition: all 5000ms ease;
+    }
+
+    .wrong-password {
+        animation-name: wrongPassword;
+        animation-duration: 2000ms;
+    }
+
+    .right-password {
+        animation-name: rightPassword;
+        animation-duration: 2000ms;
+    }
+
+    .hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    @keyframes wrongPassword {
+        from {
+            background-color: #800a;
+        }
+        to {
+
+        }
+    }
+
+    @keyframes rightPassword {
+        from {
+            background-color: #080a;
+        }
+        to {
+
+        }
+    }
+</style>
+
+<script>
+    let messages = [
+        'Contraseña incorrecta.',
+        'Sigue intentando.',
+        'Esa no es.',
+        'Que va primo.',
+        'Prueba con otra distinta.',
+        'Otra vez.',
+        'Que no.',
+        'Usted no aprende, ¿verdad?'
+    ];
+    let password = '033';
+
+    const checkPassword = async () => {
+        let formEl = document.querySelector('div#formContainer');
+        formEl.classList.remove('right-password');
+        formEl.classList.remove('wrong-password');
+
+        setTimeout(() => {
+        let inputEl = document.querySelector('input#passwordInput');
+        let userPassword = inputEl.value;
+        //console.log(userPassword);
+
+        if(userPassword === password) {
+            let step0 = 0;
+            let step1 = 2000;
+            let step2 = 2000;
+            //Right password.
+            //Step 1: Hide password form immediatly.
+            setTimeout(() => {
+                formEl.classList.add('hide');
+            }, step0);
+
+            //Step 2: Full hide password form after 2 seconds.
+            setTimeout(() => {
+                formEl.style.display = 'none';
+            }, step1);
+
+            //Step 3: Show prize container after seconds.
+            setTimeout(( ) => {
+                document.querySelector('#prizeContainer').style.display = '';
+                document.querySelector('#prizeContainer').classList.remove('hide');
+            }, step2);
+        } else {
+            formEl.classList.add('wrong-password');
+
+            //Wrong password message.
+            document.querySelector('span#wrongPasswordMessage').innerText = getMessage();
+        }
+
+            
+        }, 0);
+    }
+
+    function getMessage() {
+        let max = messages.length;
+        let min = 0;
+        let random = Math.floor(Math.random() * (max - min) + min);
+
+        return messages[random];
+    }
+</script>
